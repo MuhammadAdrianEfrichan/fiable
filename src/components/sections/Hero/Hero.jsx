@@ -7,9 +7,11 @@ const Hero = ()=>{
     return <section >
         <div className="">
             <img src={hero} alt="hero" className="w-full object-cover relative" />
-            <img src={heroLine} alt="" className="absolute z-10 top-100" />
-            <img src={ilustrasiHero} alt="" />
-            <Button></Button>
+            <div className="absolute top-120 left-130 flex flex-col items-center justify-center">
+            <img src={heroLine} alt="" />
+            <img src={ilustrasiHero} alt="" className="py-15"/>
+            <Button className="cursor-pointer">Hubungi Kami</Button>
+            </div>
         </div>
     </section>
 }
