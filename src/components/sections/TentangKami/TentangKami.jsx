@@ -5,7 +5,7 @@ import tentangKamiLine from "../../../assets/icons/tentangKamiLine.svg"
 
 const TentangKami = ()=>{
     return (
-        <section className="mt-32.75 px-14.75">
+        <section className="my-32.75 px-14.75">
             <div className="flex gap-25 justify-center">
                 <img src={tentangKami} alt="tentang kami" />
                 <div className="mt-16">
