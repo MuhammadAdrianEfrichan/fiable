@@ -1,40 +1,43 @@
-import timKamiHero from "../../../assets/image/timKamiHero.png"
-import timKami from "../../../assets/icons/timKami.svg"
-import navigate from "../../../assets/icons/navigate.svg"
-import { useState } from "react"
-const TimKami = ()=>{
-    const [isOpen, setIsOpen] = useState(false);
+import { useState } from "react";
+import AccordionItem from "../../team/AcordionItem";
+import MemberCard from "../../team/MemberCard";
+import { teamCategories } from "../../../data/teamData";
+import timKamiHero from "../../../assets/image/timKamiHero.png";
+import timKami from "../../../assets/icons/timKami.svg";
 
-    return <section className="relative bg-cover bg-center bg-no-repeat min-h-216.25" style={{ backgroundImage: `url(${timKamiHero})` }}>
-        <div className="pt-24 flex flex-col gap-20 items-center justify-center">
-                <img src={timKami} alt="" />
-                <div className="">
-            <div className="bg-white rounded-xl shadow-card overflow-hidden w-376.75 h-25 flex justify-between p-8">
-            <div className="flex items-center gap-10">
-            <span className="w-5 h-5 bg-black rotate-45" />
-            <span className="font-bold uppercase text-[35px] w-[83]">Partner profile</span>
-            </div>
-        <button
-            onClick={() => setIsOpen(!isOpen)}
-            className=""
+export default function TimKami() {
+  const [openId, setOpenId] = useState("");
+
+  const handleToggle = (id) => {
+    setOpenId((prev) => (prev === id ? null : id));
+  };
+  const partnerCategory = teamCategories.find((cat) => cat.id === "partner");
+
+  return (
+    <section
+      className="relative bg-cover bg-center bg-no-repeat pt-24 pb-32"
+      style={{ backgroundImage: `url(${timKamiHero})` }}
+    >
+
+      <div className="flex items-center flex-col justify-center gap-10 mb-16">
+        <img src={timKami} alt="" />
+      
+
+      <div className="mx-auto px-4">
+        <AccordionItem
+          title="Partner Profile"
+          isOpen={openId === "partner"}
+          onToggle={() => handleToggle("partner")}
         >
-            <img src={navigate} alt="" className={`w-7 h-3.75 cursor-pointer transition-transform duration-300 ${
-                isOpen ? "rotate-180" : "rotate-0"
-            }`}/>
-        </button>
-
-      {isOpen && (
-        <div className="px-6 pb-6 space-y-8">
-            <h1>hello</h1>
-          {/* {members.map((member) => (
-            <MemberCard key={member.id} member={member} />
-          ))} */}
-        </div>
-      )}
-    </div>
-    </div>
-        </div>
+            <div className="py-5    "></div>
+          {
+          partnerCategory.member.map((member) => (
+            <MemberCard key={member.id} member={member}/>
+          ))}
+          <div className="py-5"></div>
+        </AccordionItem>
+      </div>
+      </div>
     </section>
+  );
 }
-
-export default TimKami
