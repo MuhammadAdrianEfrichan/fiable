@@ -20,6 +20,9 @@ export default function MemberCard({ member }) {
             <p className="text-[23px] text-heading mt-2 text-justify leading-relaxed  font-normal">
             {member.bio}
             </p>
+            <p className="text-[23px] text-heading mt-2 text-justify leading-relaxed  font-normal">
+            {member.bioDua}
+            </p>
             <div className="flex items-center gap-3 mt-10">
             
             <a href={member.instagramUrl}

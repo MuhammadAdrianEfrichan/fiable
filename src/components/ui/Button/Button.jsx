@@ -1,7 +1,7 @@
 
 const variantClasses = {
-  primary: "bg-oren text-white hover:bg-orange-600 shadow-[0_8px_18px_rgba(249,160,0,0.35)]",
-  secondary: "bg-footer text-white hover:bg-navy-800",
+  primary: "bg-oren text-biru hover:bg-orange-600 shadow-[0_8px_18px_rgba(249,160,0,0.35)]",
+  secondary: "bg-footer text-oren hover:bg-navy-800",
   link: "text-oren hover:underline p-0",
 };
 
