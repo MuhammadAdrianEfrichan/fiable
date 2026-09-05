@@ -33,10 +33,10 @@ export default function TimKami() {
           onToggle={() => handleToggle("partner")}
         >
             <div className="py-5"></div>
-          {
-          partnerCategory.member.map((member) => (
-            <MemberCard key={member.id} member={member}/>
-          ))}
+            {
+            partnerCategory.member.map((member) => (
+              <MemberCard key={member.id} member={member}/>
+            ))}
           <div className="py-5"></div>
         </AccordionItem>
       </div>

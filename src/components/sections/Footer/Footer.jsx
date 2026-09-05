@@ -6,7 +6,7 @@ import igFooter from "../../../assets/icons/igFooter.svg"
 const Footer =()=>{
     return(
         <footer className="footer bg-footer text-white font-archivo">
-            <div className="mx-auto grid h-98.75 w-[calc(100%-180px)] grid-cols-[minmax(0,1fr)_200px_404px] items-center gap-x-12 max-[700px]:h-auto max-[700px]:w-[min(calc(100%-40px),420px)] max-[700px]:grid-cols-2 max-[700px]:gap-x-7 max-[700px]:gap-y-[34px] max-[700px]:py-[38px]">
+            <div className="mx-auto grid h-98.75 w-[calc(100%-180px)] grid-cols-[minmax(0,1fr)_200px_404px] items-center gap-x-12 max-[700px]:h-auto max-[700px]:w-[min(calc(100%-40px),420px)] max-[700px]:grid-cols-2 max-[700px]:gap-x-7 max-[700px]:gap-y-8.5 max-[700px]:py-9.5">
                 <div className="self-center max-[700px]:col-span-2">
                     <img className="block w-75.75 max-[700px]:w-full max-[700px]:max-w-75.75" src={fiableFooter} alt="Fiable Law Office" />
                     <div className="mt-9.5 flex items-center gap-4" aria-label="Media sosial Fiable Law Office">

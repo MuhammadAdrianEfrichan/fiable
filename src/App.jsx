@@ -1,9 +1,9 @@
-import Beranda from "./pages/Beranda"
+import AppRoutes from "./routes/Route"
+
 
 
 function App() {
-
-  return <Beranda />
+  return <AppRoutes />
 }
 
 export default App
